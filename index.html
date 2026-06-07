@@ -80,9 +80,19 @@
     }
     .hero-bg {
       position: absolute; inset: 0;
-      background: 
-        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(212,134,42,0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(26,58,92,0.6) 0%, transparent 60%);
+      background-image: url('kosovo-town.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(14,31,56,0.92) 0%,
+        rgba(14,31,56,0.75) 50%,
+        rgba(14,31,56,0.4) 100%
+      );
     }
     .hero-grain {
       position: absolute; inset: 0;
@@ -638,9 +648,12 @@
           <p class="section-body">Kosovo declared independence in 2008, following the devastating 1999 war. It remains one of Europe's youngest and poorest nations — with healthcare infrastructure, social services, and disability support still far from where families need them.</p>
           <p class="section-body" style="margin-top: 1rem;">For parents of children with intellectual and developmental disabilities (IDD), the reality is stark: they must work to survive, but there is no one to care for their child while they do. Every day, they leave home with fear.</p>
         </div>
-        <div class="crisis-callout">
-          <p class="crisis-callout-text">"They cannot call for help. They cannot recognize danger. They cannot tell a stranger their name or where they live."</p>
-          <p class="crisis-callout-attr">The daily reality for IDD families in Kosovo</p>
+        <div>
+          <div class="crisis-callout">
+            <p class="crisis-callout-text">"They cannot call for help. They cannot recognize danger. They cannot tell a stranger their name or where they live."</p>
+            <p class="crisis-callout-attr">The daily reality for IDD families in Kosovo</p>
+          </div>
+          <img src="kosovo-city.png" alt="Kosovo city" style="width:100%; height:220px; object-fit:cover; border-radius:4px; margin-top:1rem; filter:brightness(0.92);" />
         </div>
       </div>
       <div class="crisis-cards">
@@ -699,21 +712,19 @@
     </div>
   </section>
 
-  <!-- KOSOVO PHOTOS -->
-  <section style="background:var(--navy); padding: 4rem 2.5rem;" id="kosovo">
-    <div class="section-inner">
-      <p class="section-label" style="color:var(--amber-light);">Kosovo</p>
-      <h2 class="section-title" style="color:var(--white); margin-bottom:2rem;">A country of beauty and resilience</h2>
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-        <img src="kosovo-city.png" alt="Kosovo city view" style="width:100%; height:260px; object-fit:cover; border-radius:4px;" />
-        <img src="kosovo-town.png" alt="Kosovo town with mosque" style="width:100%; height:260px; object-fit:cover; border-radius:4px;" />
-        <img src="kosovo-city2.png" alt="Kosovo cityscape" style="width:100%; height:260px; object-fit:cover; border-radius:4px;" />
-        <img src="kosovo-mountains.png" alt="Kosovo mountains" style="width:100%; height:260px; object-fit:cover; border-radius:4px;" />
+
+    <!-- FULL WIDTH IMAGE -->
+  <div style="width:100%; height:360px; overflow:hidden; position:relative;">
+    <img src="kosovo-mountains.png" alt="Kosovo mountains" style="width:100%; height:100%; object-fit:cover; object-position:center 40%;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(14,31,56,0.7) 0%, rgba(14,31,56,0.2) 60%, transparent 100%);display:flex;align-items:center;padding:3rem 4rem;">
+      <div>
+        <p style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.5rem);color:white;font-weight:500;line-height:1.3;max-width:500px;">"Every child deserves to be safe — no matter where they were born."</p>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:0.75rem;letter-spacing:0.06em;text-transform:uppercase;">The mission of Levah</p>
       </div>
     </div>
-  </section>
+  </div>
 
-    <!-- DONATE -->
+  <!-- DONATE -->
   <section class="donate" id="donate">
     <div class="section-inner">
       <p class="section-label">Make a Difference</p>
